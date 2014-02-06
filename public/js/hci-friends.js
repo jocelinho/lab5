@@ -5,9 +5,17 @@ $(document).ready(function() {
 	initializePage();
 })
 
+$(".friend a").click(friendListener);
+
 /*
  * Function that is called when the document is ready.
  */
+
+function friendListener(e){
+	e.preventDefault();
+	$(this).text(anagrammedName($(this).text()));
+} 
+
 function initializePage() {
 	console.log("Javascript connected!");
 }
